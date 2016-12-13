@@ -3,9 +3,17 @@
 @{
     ViewBag.Title = "Home Page";
 }
+
+@helper LabelWithMarkRazor(string content)
+{
+    <label><mark>@content</mark></label>
+}
 <div>
     @LabelHelper.Label("staticlabelHelper", "Static Label Helper")
 </div>
 <div>
     @Html.LabelWithMark("Label with Extenstion Methods");
+</div>
+<div>
+    @LabelWithMarkRazor("This has been created using a @helper method razor view")
 </div>
